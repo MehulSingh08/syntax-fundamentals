@@ -6,5 +6,8 @@ public class LCS{
         int n = sc.nextInt();
         System.out.println("The entered number is: "+n);
         
+        sc.close();
     }
+
 }
+
