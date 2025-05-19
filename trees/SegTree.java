@@ -62,7 +62,7 @@ public class SegTree
             q--;
             System.out.println("Enter the lower index: ");
             int l = sc.nextInt();
-            System.out.println("Enter the hihger index: ");
+            System.out.println("Enter the higher index: ");
             int r = sc.nextInt();
 
             int result = query(0,0,n-1,l,r);
