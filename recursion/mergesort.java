@@ -3,10 +3,10 @@ public class mergesort
 {
     public static void Mergesort(List<Integer> arr)
     {
-        if((arr == null) || (arr.size() < 2))
+        if((arr == null) || (arr.size() < 2)) // base case for the array size for checking if element exists or not
         return;
         int n = arr.size();
-        mS(arr, 0, n-1);
+        mSort(arr, 0, n-1);
     }
     static void merge(List<Integer> arr, int low, int mid, int high)
     {
@@ -47,13 +47,13 @@ public class mergesort
         }
 
     }
-    static void mS(List<Integer> arr, int low, int high)
+    static void mSort(List<Integer> arr, int low, int high)
     {
         if (low==high) return;
         int mid = (low+high)/2;
         
-        mS(arr, low, mid);
-        mS(arr, mid+1, high);
+        mSort(arr, low, mid);
+        mSort(arr, mid+1, high);
         merge(arr, low, mid, high);
     }
 

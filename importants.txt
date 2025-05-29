@@ -1,0 +1,4 @@
+Avoid corgo cult programming, do not write the code that serves no real purpose.
+
+Syntaxes for important collections are listed below:
+Trees:
