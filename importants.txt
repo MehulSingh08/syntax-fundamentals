@@ -9,3 +9,18 @@ Swapping elements by use of arithmetic operators:
      b = a - b;
      a = a - b;
 Lets understand it, as a = (a+b), b=>(a+b)-b = a, a => (a+b)-a;
+
+A class is a blueprint of an object and deciedes upon the major 
+and basic functionalities of the object.
+
+Object is an instance of the class.
+For ex Dog is a class while Tommy is an object of the dog class.
+
+Mehul(object) is an instance to human(class).
+
+For tree Traversal.
+Root = Your house address → Starting point to find everything else
+TreeNode = The actual house → Contains the structure and connections
+int value = Just the house number → Not enough info to visit
+
+You need the actual house (TreeNode) as the starting point, not just the house number (int value)!
