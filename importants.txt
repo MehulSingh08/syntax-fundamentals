@@ -2,3 +2,10 @@ Avoid corgo cult programming, do not write the code that serves no real purpose.
 
 Syntaxes for important collections are listed below:
 Trees:
+Swapping elements by use of arithmetic operators:
+     int a = 5;
+     int b = 10;
+     a = a + b;
+     b = a - b;
+     a = a - b;
+Lets understand it, as a = (a+b), b=>(a+b)-b = a, a => (a+b)-a;
