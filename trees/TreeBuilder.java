@@ -35,26 +35,26 @@ public class TreeBuilder
 
         TreeNode root = new TreeNode(arr[0]); // creation of root element from arrays first element
 
-        Queue<TreeNode> queue = new LinkedList<>(); //initializaton of queue DS for processign one by one
+        Queue<TreeNode> q = new LinkedList<>(); //initializaton of queue DS for processign one by one
 
-        queue.offer(root); // adding first element from the queue to the already created node
+        q.offer(root); // adding first element from the queue to the already created node
 
         int i = 1; // first index gone hence at 1
-        while(!queue.isEmpty() && i<arr.length) // parallely check if array and queue have elements or not.
+        while(!q.isEmpty() && i<arr.length) // parallely check if array and queue have elements or not.
         {
-            TreeNode current = queue.poll(); // it is the current instance uses the poll function, Retrieves and removes the head of the queue, or returns null if the queue is empty
+            TreeNode current = q.poll(); // it is the current instance uses the poll function, Retrieves and removes the head of the queue, or returns null if the queue is empty
 
             if(i<arr.length && arr[i]!=-1) //element is there and not null
             {
                 current.left = new TreeNode(arr[i]); // new node created for left child
-                queue.offer(current.left); // add the second element to the left node made above
+                q.offer(current.left); // add the second element to the left node made above
             }
             i++; // move next into array
 
             if(i<arr.length && arr[i] != -1)
             {
                 current.right = new TreeNode(arr[i]);
-                queue.offer(current.right);
+                q.offer(current.right);
             }
             i++;
             //repeat the same for new right node also
@@ -70,20 +70,20 @@ public class TreeBuilder
             return;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root); //start with the root node
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root); //start with the root node
 
-        while(!queue.isEmpty())
+        while(!q.isEmpty())
         {
-            int levelsize = queue.size(); //processing the current queue at the particular level
+            int levelsize = q.size(); //processing the current queue at the particular level
 
             for(int i=0; i<levelsize; i++)
             {
-                TreeNode node = queue.poll();  //puts the node at the curre t level and push it
+                TreeNode node = q.poll();  //puts the node at the curre t level and push it
                 System.out.print(node.val +" "); 
 
-                if (node.left!=null) queue.offer(node.left); // now recursivley goes for the left and right
-                if (node.right!= null) queue.offer(node.right);
+                if (node.left!=null) q.offer(node.left); // now recursivley goes for the left and right
+                if (node.right!= null) q.offer(node.right);
             }
             System.out.println();
         }
