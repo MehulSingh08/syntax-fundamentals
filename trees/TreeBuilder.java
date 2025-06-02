@@ -31,7 +31,6 @@ public class TreeBuilder
             {
                 return null; // conditions not met
             }
-        
 
         TreeNode root = new TreeNode(arr[0]); // creation of root element from arrays first element
 
