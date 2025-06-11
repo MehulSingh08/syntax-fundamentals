@@ -120,15 +120,15 @@ public class insertion
         Scanner sc = new Scanner(System.in);
         insertion list = new insertion();
 
-        System.out.println("Linked List Insertion Operations");
-        System.out.println("1. Insert at beginning");
-        System.out.println("2. Insert at end");
-        System.out.println("3. Insert at position");
-        System.out.println("4. Display list");
-        System.out.println("5. Exit");
-
         while(true)
         {
+            System.out.println("Linked List Insertion Operations");
+            System.out.println("1. Insert at beginning");
+            System.out.println("2. Insert at end");
+            System.out.println("3. Insert at position");
+            System.out.println("4. Exit");
+            System.out.println("5. Display the size: ");
+
             System.out.print("Enter the choice: ");
             int choice = sc.nextInt();
 
@@ -139,6 +139,9 @@ public class insertion
                     int data1 = sc.nextInt();
                     list.insertBegin(data1);
                     System.out.println("Data Inserted");
+                    System.out.println("The new list is: ");
+                    list.display();
+                    System.out.println();
                     break;
 
                 case 2:
@@ -146,32 +149,37 @@ public class insertion
                     int data2 = sc.nextInt();
                     list.insertEnd(data2);
                     System.out.println("Data Inserted");
+                    System.out.print("The new list is: ");
+                    list.display();
+                    System.out.println();
                     break;
 
                 case 3:
                     System.out.print("Enter the position (0 based): ");
                     int pos = sc.nextInt();
-                    System.out.println("Enter the data: ");
+                    System.out.print("Enter the data: ");
                     int data3 = sc.nextInt();
                     list.insertPos(data3, pos);
                     System.out.println("Data Inserted");
+                    System.out.println("The new list is: ");
+                    list.display();
+                    System.out.println();
                     break;
 
                 case 4:
-                    System.out.println("The list is: ");
-                    list.display();
-                    System.out.println("The size of list is: "+list.size());
-                    break;
+                    System.out.println("Finished Execution... ");
+                    sc.close();
+                    return;
 
                 case 5:
-                return;
+                    System.out.print("The size of the list is: "+ list.size());
+                    System.out.println();
+                    break;
 
                 default:
                     System.out.println("Invalid");
-
-                sc.close();
+                    return;
             }
-
         }
     }
 }
