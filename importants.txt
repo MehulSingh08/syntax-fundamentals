@@ -24,3 +24,9 @@ TreeNode = The actual house → Contains the structure and connections
 int value = Just the house number → Not enough info to visit
 
 You need the actual house (TreeNode) as the starting point, not just the house number (int value)!
+
+Basics of writing any algorithm:
+1. Do not try to build that algo from the scratch.
+2. First write the base case then the edge cases, rest will work out with the flow easily.
+3. Always do the dry run for the code so that you understand the algorithm inherently without mugging it up.
+
